@@ -1,0 +1,12 @@
+create or replace procedure sp_regi_ofic
+(job_id varchar2 ,
+  job_title varchar2,
+ min_salary number,
+ max_salary number)
+is 
+begin 
+
+insert into jobs values(job_id , job_title,min_salary ,max_salary );
+
+exception   
+when others then 
